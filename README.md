@@ -1,7 +1,18 @@
-﻿# TP .NET
+# TP .NET - Vote préférentiel
 
-Projet local préparé pour être publié sur GitHub.
+Ce dépôt contient une solution .NET qui télécharge le fichier JSON des votes depuis GitHub, le désérialise et détermine le candidat gagnant selon une méthode de calcul par points (scrutin préférentiel).
 
-## Fichiers principaux
-- `votes.json` : données de vote
-- `votes.example.json` : exemple de données
+## Structure
+- `Vote preferentiel.slnx` : solution .NET
+- `VotePreferentiel/` : bibliothèque de classes contenant les modèles et la logique de calcul
+- `VotePreferentiel.Worker/` : service Worker qui télécharge le JSON et affiche le gagnant
+
+## Données
+- `votes.json` : fichier source de votes
+- `votes.example.json` : exemple minimal
+
+## Exécution
+```bash
+dotnet build "Vote preferentiel.slnx"
+dotnet run --project "VotePreferentiel.Worker\VotePreferentiel.Worker.csproj"
+```
