@@ -4,7 +4,7 @@ namespace VotePreferentiel;
 
 public class VoteProvider(HttpClient httpClient)
 {
-    private const string DefaultUrl = "https://raw.githubusercontent.com/Nanotekkk/TP-DOTNET/main/votes.json";
+    private const string DefaultUrl = "https://raw.githubusercontent.com/JLou/dotnet-course/refs/heads/main/eval-1/votes.json";
 
     public async Task<VoteModel> GetVotesAsync(string? url = null, CancellationToken cancellationToken = default)
     {
